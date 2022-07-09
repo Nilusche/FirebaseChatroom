@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import useLogin from '../composables/UseLogin.js'
+import useLogin from '../composables/useLogin.js'
 export default { 
     data(){
         return {
@@ -54,8 +54,7 @@ export default {
             }else{
                 this.error = null;
             }
-            
-            const user = res.user;
+            this.$emit("login");
             
         }
     }

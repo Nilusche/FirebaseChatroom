@@ -1,8 +1,8 @@
 <template>
 <div>
   <div class="hero min-h-screen bg-base-200">
-    <SignupForm v-if="register" @change-Login="register = !register"/>
-    <LoginForm v-else  @change-Login="register = !register"/>
+    <SignupForm v-if="register" @change-Login="register = !register" @signup="redirect"/>
+    <LoginForm v-else  @change-Login="register = !register" @login="redirect"/>
   </div>
 </div>
    
@@ -20,7 +20,12 @@ export default {
   components: {
     SignupForm,
     LoginForm
-},
+  },
+  methods:{
+    redirect(){
+      this.$router.push('/chat');
+    }
+  }
   
 }
 </script>

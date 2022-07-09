@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import useSignup from '../composables/UseSignup.js'
+import useSignup from '../composables/useSignup.js'
 export default {
 
     data(){
@@ -56,15 +56,13 @@ export default {
         },
         async handleSubmit(){
             const res = await useSignup(this.email, this.password, this.name);
-            if(res.error){
+            if(res && res.error){
                 this.error = res.error;
                 return;
             }else{
                 this.error = null;
             }
-
-            const user = res.user;
-            
+            this.$emit("signup"); 
         }
     }
 }
