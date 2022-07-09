@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <div class="hero min-h-screen bg-base-200">
+    <SignupForm v-if="register" @change-Login="register = !register"/>
+    <LoginForm v-else  @change-Login="register = !register"/>
   </div>
+</div>
+   
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import SignupForm from '@/components/SignupForm.vue'
+import LoginForm from '@/components/LoginForm.vue'
 export default {
-  name: 'HomeView',
+  data(){
+    return {
+      register: true
+    }
+  }, 
   components: {
-    HelloWorld
-  }
+    SignupForm,
+    LoginForm
+},
+  
 }
 </script>
+
+<style>
+</style>
