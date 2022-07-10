@@ -5,11 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "tail":"npx tailwindcss -i ./src/index.css -o ./public/output.css --watch"
+    "tail": "npx tailwindcss -i ./src/index.css -o ./public/output.css --watch"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "daisyui": "^2.18.2",
+    "date-fns": "^2.28.0",
     "firebase": "^9.9.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"

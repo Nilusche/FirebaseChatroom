@@ -3,8 +3,8 @@
     <div class="navbar bg-base-100">
         <div class="flex-1">
             <div class="flex flex-col ml-4 text-left">
-                <p class="font-bold">Hello Name, welcome to FirebaseChat</p>
-                <p class="text-base-300">Currently logged in as </p>
+                <p v-if="user" class="font-bold">Hello {{user.displayName}}, welcome to FirebaseChat</p>
+                <p v-if="user" class="text-base-300">Currently logged in as {{user.email}}</p>
             </div>
         </div>
         <div class="navbar-end">
@@ -17,6 +17,7 @@
 
 <script>
 import useLogout from '../composables/useLogout.js'
+import getUser from '../composables/getUser.js'
 export default {
 
     data(){
@@ -35,7 +36,12 @@ export default {
             }
             this.$router.push('/');
         }
-    }
+    },
+    computed:{
+        user(){
+            return getUser();
+        }
+    },  
 }
 </script>
 

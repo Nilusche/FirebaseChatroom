@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {},
     colors:{
-      my_yellow: "#E0A82E",
+      myyellow: "#E0A82E",
+      mygrey: "#73777B"
     }
   },
   plugins: [
