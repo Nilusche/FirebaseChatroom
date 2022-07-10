@@ -55,7 +55,7 @@ export default {
                 this.error = null;
             }
             this.$emit("login");
-            
+            this.$router.push('/chat'); 
         }
     }
 }

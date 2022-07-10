@@ -63,6 +63,8 @@ export default {
                 this.error = null;
             }
             this.$emit("signup"); 
+
+            this.$router.push('/chat');
         }
     }
 }
