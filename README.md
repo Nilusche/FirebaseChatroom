@@ -1,4 +1,4 @@
-# chatroom
+# Realtime Chatroom using Firebase and Vue
 
 ## Direct link
 <a href="https://vuechatroom-d0b7b.web.app/">FirebaseChat</a>
